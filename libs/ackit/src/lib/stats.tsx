@@ -1,4 +1,7 @@
 import React from 'react';
+import { horizontalPaddingStyle } from '../common';
+import classNames from 'classnames';
+import { textStyle } from './typography';
 
 type StatProps = {
   name: string;
@@ -8,8 +11,14 @@ type StatProps = {
 
 export function Stat(props: StatProps) {
   return (
-    <div key={props.name} className="bg-gray-900 px-4 py-6 sm:px-6 lg:px-8">
-      <p className="text-sm font-medium leading-6 text-gray-400">
+    <div
+      key={props.name}
+      className={classNames(
+        'bg-gray-950 py-6 rounded',
+        horizontalPaddingStyle()
+      )}
+    >
+      <p className={classNames('text-sm font-medium', textStyle())}>
         {props.name}
       </p>
       <p className="mt-2 flex items-baseline gap-x-2">
@@ -26,9 +35,9 @@ export function Stat(props: StatProps) {
 
 export function StatsRow(props: React.PropsWithChildren) {
   return (
-    <div className="bg-gray-900">
+    <div className={horizontalPaddingStyle()}>
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-px bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-px sm:grid-cols-2 lg:grid-cols-4">
           {props.children}
         </div>
       </div>
