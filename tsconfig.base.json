@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@audiocloud/domainapi": ["libs/domainapi/src/index.ts"],
       "@frontend/ackit": ["libs/ackit/src/index.ts"],
       "@frontend/ackit/server": ["libs/ackit/src/server.ts"]
     }
